@@ -1,0 +1,36 @@
+{
+  "name": "make-it-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:dashboard": "npx cypress run --record --key 7c9277f7-eeb1-4011-ade2-0e42a35ebbea",
+    "triggerAllTest-headless": "npx cypress run",
+    "triggerAllTest-headed": "npx cypress run --headed",
+    "trigger-products": "npx cypress run --spec cypress/e2e/products.ts",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "triggerAllTest-headless-merge": "npx cypress run && npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
+    "delete-results": "rm -rf cypress/results/* || true",
+    "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "delete-mochawesome-report":"rm -rf mochawesome-report/* || true",
+    "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTest-headless ; npm run mochawesome-merge"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.14.0",
+    "npx": "^10.2.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha-junit-reporter": "^2.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "typescript": "^5.1.3"
+  }
+}

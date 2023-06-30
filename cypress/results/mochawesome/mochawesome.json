@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-30T13:40:47.893Z",
+    "end": "2023-06-30T13:41:04.609Z",
+    "duration": 16716,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad3b9f70-5ee2-4455-9f44-c779d86e7d5e",
+      "title": "",
+      "fullFile": "cypress/e2e/SignupLogin.ts",
+      "file": "cypress/e2e/SignupLogin.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "62d04c20-e125-457f-b1ea-ed30eddec933",
+          "title": "Create and login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with correct data",
+              "fullTitle": "Create and login Login with correct data",
+              "timedOut": null,
+              "duration": 10874,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.login('gent@gmail.com', data.password);",
+              "err": {},
+              "uuid": "fb707f62-fbed-460a-8c9d-29763b17d756",
+              "parentUUID": "62d04c20-e125-457f-b1ea-ed30eddec933",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to login with incorrect data",
+              "fullTitle": "Create and login Try to login with incorrect data",
+              "timedOut": null,
+              "duration": 5678,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.login('gent@gmail.com', '123123');\nhomePage.incorrectData();",
+              "err": {},
+              "uuid": "bd01377c-4fa6-4a8a-8724-2cf1aed7f87a",
+              "parentUUID": "62d04c20-e125-457f-b1ea-ed30eddec933",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb707f62-fbed-460a-8c9d-29763b17d756",
+            "bd01377c-4fa6-4a8a-8724-2cf1aed7f87a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16552,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
