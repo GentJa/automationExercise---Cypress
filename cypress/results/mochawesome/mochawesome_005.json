@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-30T20:32:32.465Z",
+    "end": "2023-06-30T20:33:01.165Z",
+    "duration": 28700,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "922f8c05-2b08-4e56-b7a8-a4493053acfb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\contactUs.ts",
+      "file": "cypress\\e2e\\contactUs.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9ce7cbe6-6430-4dcf-abcd-92adfc8e23ab",
+          "title": "Contact Us Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Contact Us",
+              "fullTitle": "Contact Us Page Contact Us",
+              "timedOut": null,
+              "duration": 19285,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickOn(homePage.selectors.contactUs);\ncy.getValue(contactPage.selectors.getInTouch, contactPage.selectors.getInTouchText);\ncy.fillInput(contactPage.selectors.name, 'Gent');\ncy.fillInput(contactPage.selectors.email, 'gent@gmail.com');\ncy.fillInput(contactPage.selectors.subject, 'AI');\ncy.fillInput(contactPage.selectors.message, 'Test....');\ncy.uploadFile(contactPage.selectors.fileUpload, 'cypress/fixtures/sample.pdf');\ncy.clickOn(contactPage.selectors.submit);\ncy.getValue(contactPage.selectors.success, 'Success! Your details have been submitted successfully.');\ncy.clickOn(contactPage.selectors.homeButton);\ncy.verifyUrlOfPage(homePage.selectors.homePageUrl);",
+              "err": {},
+              "uuid": "6875ce76-54b6-4cfa-a0ac-fcdbdfcbf85d",
+              "parentUUID": "9ce7cbe6-6430-4dcf-abcd-92adfc8e23ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Test Cases Page",
+              "fullTitle": "Contact Us Page Verify Test Cases Page",
+              "timedOut": null,
+              "duration": 9266,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickOn(homePage.selectors.testCase);\ncy.verifyUrlOfPage('https://www.automationexercise.com/test_cases');",
+              "err": {},
+              "uuid": "1a456b1c-f8a3-425e-915d-e730771e971b",
+              "parentUUID": "9ce7cbe6-6430-4dcf-abcd-92adfc8e23ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6875ce76-54b6-4cfa-a0ac-fcdbdfcbf85d",
+            "1a456b1c-f8a3-425e-915d-e730771e971b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28551,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
