@@ -8,12 +8,12 @@ describe('Products', () => {
     const homePage = new homePage_POM();
     const products = new products_POM();
     const carts = new carts_POM();
-    before(function() {
-        cy.fixture("products").then(function(data){
+    before(function () {
+        cy.fixture("products").then(function (data) {
             (globalThis as any).data = data;
         })
     })
-    
+
     beforeEach(() => {
         // cy.accessHomePage();
         // cy.clickOn(products.selectors.products);
@@ -33,15 +33,15 @@ describe('Products', () => {
     });
 
     it('Add multiple prodcuts to cart', () => {
-        (globalThis as any).data.productName.forEach(function(el:string) {
+        (globalThis as any).data.productName.forEach(function (el: string) {
 
-            products.addMultipleProducts(products.selectors.firstProduct,el);
+            products.addMultipleProducts(products.selectors.firstProduct, el);
             debugger;
             // cy.wait(2000)
             // cy.clickOn(products.selectors.modal);
             // cy.clickOn(carts.selectors.carts);
         });
-        
+
     })
 
     it('Add Products to Cart', () => {
@@ -69,23 +69,24 @@ describe('Products', () => {
             });
     });
     it('Verify Product quantity in Cart', {
-        retries:{
-            runMode:2,
-            openMode:2
-        }
+        // retries: {
+        //     runMode: 2,
+        //     openMode: 2
+        // }
     },
-    () => {
-        
-        let qunatity = '10';
-        cy.get(products.selectors.viewProduct).click();
-        products.clearAndFillInput(products.selectors.quantity, qunatity);
-        cy.clickOn(products.selectors.addProductToCartButton);
-        cy.getValue(products.selectors.modalProductAdded, 'Added!');
-        cy.clickOn(carts.selectors.carts);
-        cy.get(carts.selectors.quantity)
-            .invoke('text')
-            .then((item) => {
-                cy.verifyValues(qunatity, item);
-            });
-    });
+        () => {
+
+            let qunatity = '10';
+            cy.get(products.selectors.viewProduct).click();
+            products.clearAndFillInput(products.selectors.quantity, qunatity);
+            cy.clickOn(products.selectors.addProductToCartButton);
+            cy.getValue(products.selectors.modalProductAdded, 'Added!');
+            cy.clickOn(products.selectors.modal);
+            cy.clickOn(carts.selectors.carts);
+            cy.get(carts.selectors.quantity)
+                .invoke('text')
+                .then((item) => {
+                    cy.verifyValues(qunatity, item);
+                });
+        });
 });

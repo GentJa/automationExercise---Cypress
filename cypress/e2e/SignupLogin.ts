@@ -24,7 +24,7 @@ describe('Create and login', () => {
   });
 
   it('Create account', function () { // Use a regular function instead of an arrow function to preserve the 'this' context
-   
+
     cy.get('.signup-form > h2').then((itemText) => {
       const signUpText = itemText.text();
       expect(signUpText).to.equal('New User Signup!');
@@ -50,30 +50,30 @@ describe('Create and login', () => {
     cy.fillInput(signUpPage.selectors.zipCode, '10000');
     cy.fillInput(signUpPage.selectors.mobileNumber, '146-123-123');
     cy.clickOn(signUpPage.selectors.createAccount);
-    cy.getValue(signUpPage.selectors.accountCreated,'Account Created!');
+    cy.getValue(signUpPage.selectors.accountCreated, 'Account Created!');
     cy.clickOn(signUpPage.selectors.clickcreateAccountatTheEnd);
     homePage.verifyLoggedInUsername();
   });
 
-  it.only('Login with correct data',() => {
-    homePage.login('gent@gmail.com',data.password);
+  it.only('Login with correct data', () => {
+    homePage.login('gent@gmail.com', data.password);
   })
 
-  it.only('Try to login with incorrect data',() => {
-    homePage.login('gent@gmail.com','123123');
+  it.only('Try to login with incorrect data', () => {
+    homePage.login('gent@gmail.com', '123123');
     homePage.incorrectData();
-})
+  })
 
-it('Logut user',() => {
-    cy.getValue(homePage.selectors.homePageText,'Login to your account');
-    cy.fillInput(homePage.selectors.loginEmail,'gent@gmail.com');
-    cy.fillInput(homePage.selectors.loginPassword,data.password); 
+  it('Logut user', () => {
+    cy.getValue(homePage.selectors.homePageText, 'Login to your account');
+    cy.fillInput(homePage.selectors.loginEmail, 'gent@gmail.com');
+    cy.fillInput(homePage.selectors.loginPassword, data.password);
     cy.clickOn(homePage.selectors.loginButton);
     homePage.verifyLoggedInUsername();
     cy.clickOn(homePage.selectors.logout)
     cy.verifyUrlOfPage(homePage.selectors.loginUrl)
-})
-after(()=>{
-  
-})
+  })
+  after(() => {
+
+  })
 });

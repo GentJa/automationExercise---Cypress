@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 1,
     "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-06-30T13:41:06.821Z",
-    "end": "2023-06-30T13:41:35.303Z",
-    "duration": 28482,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "failures": 0,
+    "start": "2023-06-30T19:32:21.350Z",
+    "end": "2023-06-30T19:32:27.736Z",
+    "duration": 6386,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,73 +18,49 @@
   },
   "results": [
     {
-      "uuid": "91fa9626-dba2-45ab-8278-daf7b87dbe43",
+      "uuid": "aaf34bd1-6ddb-45b5-887b-3b39b386b569",
       "title": "",
-      "fullFile": "cypress/e2e/contactUs.ts",
-      "file": "cypress/e2e/contactUs.ts",
+      "fullFile": "cypress\\e2e\\homePage.ts",
+      "file": "cypress\\e2e\\homePage.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "0dcc49c2-a336-4fc1-bf7d-e503025cc38b",
-          "title": "Contact Us Page",
+          "uuid": "8268ae53-f357-4f86-8aa4-5a60f02f804b",
+          "title": "HomePage",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Contact Us",
-              "fullTitle": "Contact Us Page Contact Us",
+              "title": "Verify Subscription in home page",
+              "fullTitle": "HomePage Verify Subscription in home page",
               "timedOut": null,
-              "duration": 18110,
+              "duration": 6306,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.clickOn(homePage.selectors.contactUs);\ncy.getValue(contactPage.selectors.getInTouch, contactPage.selectors.getInTouchText);\ncy.fillInput(contactPage.selectors.name, 'Gent');\ncy.fillInput(contactPage.selectors.email, 'gent@gmail.com');\ncy.fillInput(contactPage.selectors.subject, 'AI');\ncy.fillInput(contactPage.selectors.message, 'Test....');\ncy.uploadFile(contactPage.selectors.fileUpload, 'cypress/fixtures/sample.pdf');\ncy.clickOn(contactPage.selectors.submit);\ncy.getValue(contactPage.selectors.success, 'Success! Your details have been submitted successfully.');\ncy.clickOn(contactPage.selectors.homeButton);\ncy.verifyUrlOfPage(homePage.selectors.homePageUrl);",
+              "code": "cy.scroll(homePage.selectors.footer);\ncy.getValue(homePage.selectors.subscription, 'Subscription');\ncy.fillInput(homePage.selectors.subscribeInput, 'Test@gmail.com');\ncy.clickOn(homePage.selectors.subscribeButton);\ncy.verifyPresence(homePage.selectors.alertSuccess);",
               "err": {},
-              "uuid": "a7a1ba28-3c35-4e28-b0fa-41590e0f8ae2",
-              "parentUUID": "0dcc49c2-a336-4fc1-bf7d-e503025cc38b",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Verify Test Cases Page",
-              "fullTitle": "Contact Us Page Verify Test Cases Page",
-              "timedOut": null,
-              "duration": 10151,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "cy.clickOn(homePage.selectors.testCase);\ncy.verifyUrlOfPage('/' + 'test_cases');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.automationexercise.com/test_cases' to equal '/test_cases'",
-                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.automationexercise.com/test_cases' to equal '/test_cases'\n    at Context.eval (webpack:///./cypress/support/commands.ts:61:0)",
-                "diff": "- 'https://www.automationexercise.com/test_cases'\n+ '/test_cases'\n"
-              },
-              "uuid": "4df240eb-e484-4e5d-8146-0a2af36fc5a9",
-              "parentUUID": "0dcc49c2-a336-4fc1-bf7d-e503025cc38b",
+              "uuid": "d41af145-e35a-49c7-97d6-54620c46244f",
+              "parentUUID": "8268ae53-f357-4f86-8aa4-5a60f02f804b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a7a1ba28-3c35-4e28-b0fa-41590e0f8ae2"
+            "d41af145-e35a-49c7-97d6-54620c46244f"
           ],
-          "failures": [
-            "4df240eb-e484-4e5d-8146-0a2af36fc5a9"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28261,
+          "duration": 6306,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

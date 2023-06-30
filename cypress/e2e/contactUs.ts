@@ -25,6 +25,6 @@ describe('Contact Us Page', () => {
 
     it('Verify Test Cases Page', () => {
         cy.clickOn(homePage.selectors.testCase);
-        cy.verifyUrlOfPage('/' + 'test_cases');
+        cy.verifyUrlOfPage('https://www.automationexercise.com/test_cases');
     });
 });
