@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-06-30T19:31:57.432Z",
-    "end": "2023-06-30T19:32:19.044Z",
-    "duration": 21612,
+    "start": "2023-06-30T19:37:39.627Z",
+    "end": "2023-06-30T19:37:58.352Z",
+    "duration": 18725,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a1d0b02d-5240-470e-ae09-8d2a94ddf8ba",
+      "uuid": "a5eeee8c-5315-429d-a00e-54e83351bc5f",
       "title": "",
       "fullFile": "cypress\\e2e\\contactUs.ts",
       "file": "cypress\\e2e\\contactUs.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c37c347a-c94c-4628-9876-5348c6f17ab8",
+          "uuid": "3749972f-5ee9-4698-b3ac-350203ef7b30",
           "title": "Contact Us Page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Contact Us",
               "fullTitle": "Contact Us Page Contact Us",
               "timedOut": null,
-              "duration": 15875,
+              "duration": 14016,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.clickOn(homePage.selectors.contactUs);\ncy.getValue(contactPage.selectors.getInTouch, contactPage.selectors.getInTouchText);\ncy.fillInput(contactPage.selectors.name, 'Gent');\ncy.fillInput(contactPage.selectors.email, 'gent@gmail.com');\ncy.fillInput(contactPage.selectors.subject, 'AI');\ncy.fillInput(contactPage.selectors.message, 'Test....');\ncy.uploadFile(contactPage.selectors.fileUpload, 'cypress/fixtures/sample.pdf');\ncy.clickOn(contactPage.selectors.submit);\ncy.getValue(contactPage.selectors.success, 'Success! Your details have been submitted successfully.');\ncy.clickOn(contactPage.selectors.homeButton);\ncy.verifyUrlOfPage(homePage.selectors.homePageUrl);",
               "err": {},
-              "uuid": "1eba666e-d14b-47bd-8597-88b0f4847977",
-              "parentUUID": "c37c347a-c94c-4628-9876-5348c6f17ab8",
+              "uuid": "1dac43b1-a963-41c2-a574-c0f500787337",
+              "parentUUID": "3749972f-5ee9-4698-b3ac-350203ef7b30",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +56,30 @@
               "title": "Verify Test Cases Page",
               "fullTitle": "Contact Us Page Verify Test Cases Page",
               "timedOut": null,
-              "duration": 5603,
+              "duration": 4556,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.clickOn(homePage.selectors.testCase);\ncy.verifyUrlOfPage('https://www.automationexercise.com/test_cases');",
               "err": {},
-              "uuid": "60e1eff5-1825-4e48-910c-43f05dd7dc72",
-              "parentUUID": "c37c347a-c94c-4628-9876-5348c6f17ab8",
+              "uuid": "5e4267af-d9cf-4810-8728-5b7560cb4924",
+              "parentUUID": "3749972f-5ee9-4698-b3ac-350203ef7b30",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1eba666e-d14b-47bd-8597-88b0f4847977",
-            "60e1eff5-1825-4e48-910c-43f05dd7dc72"
+            "1dac43b1-a963-41c2-a574-c0f500787337",
+            "5e4267af-d9cf-4810-8728-5b7560cb4924"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21478,
+          "duration": 18572,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

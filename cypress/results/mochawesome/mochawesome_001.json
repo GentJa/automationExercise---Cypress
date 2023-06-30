@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-06-30T19:32:21.350Z",
-    "end": "2023-06-30T19:32:27.736Z",
-    "duration": 6386,
+    "start": "2023-06-30T19:38:00.117Z",
+    "end": "2023-06-30T19:38:06.737Z",
+    "duration": 6620,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "aaf34bd1-6ddb-45b5-887b-3b39b386b569",
+      "uuid": "ac254109-c24e-4be0-b1b7-5a5c58d3d53b",
       "title": "",
       "fullFile": "cypress\\e2e\\homePage.ts",
       "file": "cypress\\e2e\\homePage.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8268ae53-f357-4f86-8aa4-5a60f02f804b",
+          "uuid": "cd0da277-7374-4efb-a82d-2ce3a631b075",
           "title": "HomePage",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Verify Subscription in home page",
               "fullTitle": "HomePage Verify Subscription in home page",
               "timedOut": null,
-              "duration": 6306,
+              "duration": 6560,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.scroll(homePage.selectors.footer);\ncy.getValue(homePage.selectors.subscription, 'Subscription');\ncy.fillInput(homePage.selectors.subscribeInput, 'Test@gmail.com');\ncy.clickOn(homePage.selectors.subscribeButton);\ncy.verifyPresence(homePage.selectors.alertSuccess);",
               "err": {},
-              "uuid": "d41af145-e35a-49c7-97d6-54620c46244f",
-              "parentUUID": "8268ae53-f357-4f86-8aa4-5a60f02f804b",
+              "uuid": "965587f6-95d1-4bbd-bce1-ebdd6dccc4c5",
+              "parentUUID": "cd0da277-7374-4efb-a82d-2ce3a631b075",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d41af145-e35a-49c7-97d6-54620c46244f"
+            "965587f6-95d1-4bbd-bce1-ebdd6dccc4c5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6306,
+          "duration": 6560,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

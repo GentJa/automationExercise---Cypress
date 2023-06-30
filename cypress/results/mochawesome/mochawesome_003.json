@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-06-30T19:33:21.015Z",
-    "end": "2023-06-30T19:33:38.253Z",
-    "duration": 17238,
+    "start": "2023-06-30T19:38:46.453Z",
+    "end": "2023-06-30T19:39:03.183Z",
+    "duration": 16730,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "323ddb29-4ff9-4d10-8e33-f10ebf808d14",
+      "uuid": "683ddbca-0286-43e9-a636-f46ef40385f0",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupLogin.ts",
       "file": "cypress\\e2e\\SignupLogin.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c2dea928-0bb0-49b8-a1ff-5a9df7fc8f96",
+          "uuid": "f02a5b21-9c57-4957-871f-7b6892bc79a9",
           "title": "Create and login",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Login with correct data",
               "fullTitle": "Create and login Login with correct data",
               "timedOut": null,
-              "duration": 11219,
+              "duration": 9930,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "homePage.login('gent@gmail.com', data.password);",
               "err": {},
-              "uuid": "decafd47-300e-4adc-85ab-f62bc7a688df",
-              "parentUUID": "c2dea928-0bb0-49b8-a1ff-5a9df7fc8f96",
+              "uuid": "56b768a1-0742-4438-9ca6-b1492af2e625",
+              "parentUUID": "f02a5b21-9c57-4957-871f-7b6892bc79a9",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Try to login with incorrect data",
               "fullTitle": "Create and login Try to login with incorrect data",
               "timedOut": null,
-              "duration": 5882,
+              "duration": 6666,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "homePage.login('gent@gmail.com', '123123');\nhomePage.incorrectData();",
               "err": {},
-              "uuid": "0829d4bb-b245-41ce-a409-22cecfbb017a",
-              "parentUUID": "c2dea928-0bb0-49b8-a1ff-5a9df7fc8f96",
+              "uuid": "f379fc39-a940-43cb-892b-8c46400db0af",
+              "parentUUID": "f02a5b21-9c57-4957-871f-7b6892bc79a9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "decafd47-300e-4adc-85ab-f62bc7a688df",
-            "0829d4bb-b245-41ce-a409-22cecfbb017a"
+            "56b768a1-0742-4438-9ca6-b1492af2e625",
+            "f379fc39-a940-43cb-892b-8c46400db0af"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17101,
+          "duration": 16596,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
