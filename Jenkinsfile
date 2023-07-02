@@ -1,31 +1,32 @@
 pipeline {
-    agent any 
-
+    agent any
+    
     tools {nodejs "Node"}
 
     stages {
-        stage('Cypress parallel test suite') {
+        stage('Cypress Parallel Test Suite') {
             parallel {
                 stage('Slave Node1') {
                     agent {
                         label "remote_node1"
                     }
                     steps {
-                        github url:'https://github.com/GentJa/automationExercise---Cypress.git'
+                        git url: 'https://github.com/GentJa/automationExercise---Cypress.git'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run cypress:dashboard'
+                        bat 'npm run %Script%'  
+                        // example above  bat 'npm run triggerAllTests-webdriveruni-dashboard'
                     }
                 }
-                   stage('Slave Node2') {
+                stage('Slave Node2') {
                     agent {
                         label "remote_node2"
                     }
                     steps {
-                        github url:'https://github.com/GentJa/automationExercise---Cypress.git'
+                        git url: 'https://github.com/GentJa/automationExercise---Cypress.git'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run cypress:dashboard'
+                        bat 'npm run %Script%'
                     }
                 }
             }
