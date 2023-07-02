@@ -12,8 +12,8 @@ pipeline {
                     }
                     steps {
                         github url:'https://github.com/GentJa/automationExercise---Cypress.git',
-                        bat 'npm install',
-                        bat 'npm update',
+                        bat 'npm install'
+                        bat 'npm update'
                         bat 'npm run cypress:dashboard'
                     }
                 }
@@ -23,8 +23,8 @@ pipeline {
                     }
                     steps {
                         github url:'https://github.com/GentJa/automationExercise---Cypress.git',
-                        bat 'npm install',
-                        bat 'npm update',
+                        bat 'npm install'
+                        bat 'npm update'
                         bat 'npm run cypress:dashboard'
                     }
                 }
