@@ -15,7 +15,6 @@ pipeline {
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run %Script%'  
-                        // example above  bat 'npm run triggerAllTests-webdriveruni-dashboard'
                     }
                 }
                 stage('Slave Node2') {
