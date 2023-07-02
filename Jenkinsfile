@@ -11,7 +11,7 @@ pipeline {
                         label "remote_node1"
                     }
                     steps {
-                        github url:'https://github.com/GentJa/automationExercise---Cypress.git',
+                        github url:'https://github.com/GentJa/automationExercise---Cypress.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run cypress:dashboard'
@@ -22,7 +22,7 @@ pipeline {
                         label "remote_node2"
                     }
                     steps {
-                        github url:'https://github.com/GentJa/automationExercise---Cypress.git',
+                        github url:'https://github.com/GentJa/automationExercise---Cypress.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run cypress:dashboard'
