@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:dashboard": "npx cypress run --record --key d8bef2e2-b9db-4fef-a059-0ab3f3eb1932",
+    "cypress:dashboard": "npx cypress run --record --key d8bef2e2-b9db-4fef-a059-0ab3f3eb1932 --parallel",
     "triggerAllTest-headless": "npx cypress run",
     "triggerAllTest-headed": "npx cypress run --headed",
     "trigger-products": "npx cypress run --spec cypress/e2e/products.ts",
