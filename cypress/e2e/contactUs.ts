@@ -23,7 +23,7 @@ describe('Contact Us Page', () => {
         cy.verifyUrlOfPage(homePage.selectors.homePageUrl);
     });
 
-    it('Verify Test Cases Page', () => {
+    it.only('Verify Test Cases Page', () => {
         cy.clickOn(homePage.selectors.testCase);
         cy.verifyUrlOfPage('https://www.automationexercise.com/test_cases');
     });
