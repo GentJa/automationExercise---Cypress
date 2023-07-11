@@ -12,7 +12,7 @@ describe('GET / POST - Products', () => {
     //     });
     // });
 
-    it('should search for a product', () => {
+    it('should create new product', () => {
         cy.request({
             method: 'POST',
             url: 'https://jsonplaceholder.typicode.com/posts',
@@ -43,7 +43,7 @@ describe('Users', () => {
         });
     });
 
-    it.only('should post a user',() => {
+    it('should post a user',() => {
 
       cy.request({
         method:"POST",
