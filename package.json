@@ -23,10 +23,12 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.14.0",
+    "mysql2": "^3.5.1",
     "npx": "^10.2.2"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
+    "@types/mysql": "^2.15.21",
     "cypress-multi-reporters": "^1.6.3",
     "mocha-junit-reporter": "^2.2.0",
     "mochawesome": "^7.1.3",

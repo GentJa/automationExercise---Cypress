@@ -96,6 +96,42 @@ Cypress.Commands.add('getTextContent', (selector: string): void => {
   })
 })
 
+Cypress.Commands.add("insertCustomer", (customerData) => {
+  const query = `INSERT INTO customers (
+    customerNumber,
+    customerName,
+    contactLastName,
+    contactFirstName,
+    phone,
+    addressLine1,
+    addressLine2,
+    city,
+    state,
+    postalCode,
+    country,
+    salesRepEmployeeNumber,
+    creditLimit
+  )
+  VALUES (
+    ${customerData.customerNumber},
+    '${customerData.customerName}',
+    '${customerData.contactLastName}',
+    '${customerData.contactFirstName}',
+    '${customerData.phone}',
+    '${customerData.addressLine1}',
+    '${customerData.addressLine2}',
+    '${customerData.city}',
+    '${customerData.state}',
+    '${customerData.postalCode}',
+    '${customerData.country}',
+    ${customerData.salesRepEmployeeNumber},
+    ${customerData.creditLimit}
+  );`;
+
+  cy.task("queryDb", query);
+});
+
+
 
 
 

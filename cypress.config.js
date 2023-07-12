@@ -1,10 +1,18 @@
 const { defineConfig } = require("cypress");
+const { queryTestDb } = require("./cypress/plugins/index");
 
 module.exports = defineConfig({
   projectId: "3kx7zk",
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on("task", {
+        // Define your task function here
+          // Replace this with your actual database query logic
+          // For demonstration purposes, we'll just return a dummy response
+          queryDb: query => {
+            return queryTestDb(query, config);
+          }
+      });
     },
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx,feature}',
     video: false,
@@ -24,7 +32,14 @@ module.exports = defineConfig({
       openMode: 0
     },
     env: {
-      products: "/products"
-    }
+      products: "/products",
+      db: {
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "root123.",
+        "database": "classicmodels"
+      }
+    },
+    
   },
 });

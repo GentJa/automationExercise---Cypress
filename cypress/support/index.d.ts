@@ -16,6 +16,7 @@ declare namespace Cypress {
       getTextContent(value:string): Chainable<Subject>;
       uploadFile(selector:string,path:string): Chainable<Subject>;
       verifyValues(selector:string,selector:string): Chainable<Subject>;
+      insertCustomer(customerData:any): Chainable<Subject>;
     }
   }
   
