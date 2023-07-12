@@ -1,7 +1,7 @@
 // / <reference types="Cypress"/>
 describe("Test DB", () => {
   //Dummy data to insert in the customer, and then to check if those data are added correctly
-  const cNumber = 99929292;
+  const cNumber = 12345679;
   const customerData = {
     customerNumber: cNumber,
     customerName: "ABC Company",
@@ -45,7 +45,7 @@ describe("Test DB", () => {
         postalCode: lastRecord.postalCode,
         country: lastRecord.country,
         salesRepEmployeeNumber: lastRecord.salesRepEmployeeNumber,
-        creditLimit: parseFloat(lastRecord.creditLimit), // Ensure creditLimit is parsed as a number
+        creditLimit: parseFloat(lastRecord.creditLimit),
       };
   
       console.log(formattedLastRecord);
@@ -54,7 +54,7 @@ describe("Test DB", () => {
     });
   });
 
-  it.only('Update customer in MySQL', () => {
+  it('Update customer in MySQL', () => {
   const updateQuery = `
         UPDATE customers
         SET
@@ -77,7 +77,19 @@ describe("Test DB", () => {
         cy.log('Customer updated successfully');
       });
     });
-  });
+
+    it.only('Delete customer from MySQL', () => {
+
+      const deleteQuery = `
+        DELETE FROM customers
+        WHERE customerNumber = ${cNumber};
+      `;
+    
+      cy.task('queryDb', deleteQuery).then(() => {
+        cy.log('Customer deleted successfully');
+      });
+    });
+});
 
 
  
