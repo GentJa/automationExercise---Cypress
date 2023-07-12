@@ -56,10 +56,17 @@ describe('Create and login', () => {
   });
 
   it.only('Login with correct data', () => {
+    cy.intercept('POST', '**/login').as('loginRequest') // Assuming the login API endpoint is '/api/login'
+
     homePage.login('gent@gmail.com', data.password);
+
+    cy.wait('@loginRequest').then((interception) => {
+      // console.log(interception.response?.statusCode)
+      expect(interception.response?.statusCode).to.be.equal(302)
+    })
   })
 
-  it.only('Try to login with incorrect data', () => {
+  it('Try to login with incorrect data', () => {
     homePage.login('gent@gmail.com', '123123');
     homePage.incorrectData();
   })

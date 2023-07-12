@@ -78,7 +78,7 @@ describe("Test DB", () => {
       });
     });
 
-    it.only('Delete customer from MySQL', () => {
+    it('Delete customer from MySQL', () => {
 
       const deleteQuery = `
         DELETE FROM customers
